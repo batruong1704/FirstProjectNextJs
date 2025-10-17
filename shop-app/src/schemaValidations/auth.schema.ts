@@ -2,10 +2,25 @@ import z from 'zod'
 
 export const RegisterBody = z
     .object({
-        name: z.string().trim().min(2).max(256),
-        email: z.string().email(),
-        password: z.string().min(6).max(100),
-        confirmPassword: z.string().min(6).max(100)
+        name: z.string()
+            .trim()
+            .min(3, { message: "Tên không phù hợp" })
+            .max(256, { message: "Tên không phù hợp" }),
+        email: z.string().email({ message: "Email không hợp lệ" }),
+        phoneNumber: z.string().min(8).max(10),
+        password: z.string()
+            .min(8, { message: "Mật khẩu phải có ít nhất 8 ký tự" })
+            .max(100)
+            .refine(
+                (val) =>
+                    /[a-zA-Z]/.test(val) &&               
+                    /[0-9]/.test(val) &&                  
+                    /[^a-zA-Z0-9]/.test(val),            
+                {
+                    message: "Mật khẩu không đủ mạnh, vui lòng nhập lại với 8 kí tự bao gồm số, chữ và 1 kí tự đặc biệt"
+                }
+            ),
+        confirmPassword: z.string().min(8, { message: "Xảy ra lỗi, vui lòng nhập lại" }).max(100)
     })
     .strict()
     .superRefine(({ confirmPassword, password }, ctx) => {
@@ -37,8 +52,16 @@ export type RegisterResType = z.TypeOf<typeof RegisterRes>
 
 export const LoginBody = z
     .object({
-        email: z.string().email(),
-        password: z.string().min(6).max(100)
+        emailOrPhoneNumber: z.string()
+        .refine(
+            (val) =>
+              z.string().email().safeParse(val).success ||
+              (/^\d{10}$/.test(val) && !isNaN(Number(val))),
+            {
+              message: "Vui lòng nhập đúng định dạng email hoặc số điện thoại",
+            }
+          ),
+          password: z.string().min(6, "Mật khẩu phải có ít nhất 6 ký tự"),
     })
     .strict()
 
