@@ -11,11 +11,11 @@ import LoginForm from "./login-form";
 export default function LoginPage() {
     return (
         <div className="min-h-screen flex">
-            <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-green-50 to-amber-50 dark:from-green-950 dark:to-amber-950 items-center justify-center p-12">
-                <Image 
-                    src="/image/banner-register.png" 
-                    alt="register" 
-                    width={600} 
+            <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-900 items-center justify-center p-12">
+                <Image
+                    src="/image/banner-register.png"
+                    alt="register"
+                    width={600}
                     height={600}
                     className="w-full max-w-lg h-auto drop-shadow-2xl"
                 />

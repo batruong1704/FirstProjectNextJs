@@ -20,12 +20,12 @@ export default function RegisterPage() {
                     <RegisterForm />
                 </div>
             </div>
-            
-            <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 items-center justify-center p-12">
-                <Image 
-                    src="/image/banner-register.png" 
-                    alt="register" 
-                    width={800} 
+
+            <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-orange-50 to-amber-100 dark:from-orange-950 dark:to-amber-900 items-center justify-center p-12">
+                <Image
+                    src="/image/banner-register.png"
+                    alt="register"
+                    width={800}
                     height={800}
                     className="w-full max-w-lg h-auto drop-shadow-2xl"
                 />
