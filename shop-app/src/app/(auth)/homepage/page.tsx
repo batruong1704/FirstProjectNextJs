@@ -11,47 +11,46 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function HomePage() {
     return (
-        <div className="h-full w-full mt-10">
-            <div className="sayhello-page flex pb-12 border-b border-gray-200">
-                <div className="welcome-page w-[65%] relative pr-8">
-                    <div className="relative w-[85%] overflow-hidden rounded-lg ml-auto">
+        <div className="h-full w-full">
+            <div className="sayhello-page flex pb-12 border-b border-gray-200 mt-10">
+                <div className="welcome-page w-[65%] pr-8">
+                    <div className="w-[85%] grid overflow-hidden rounded-lg ml-auto">
                         <Image
                             src="/image/homepage/bg-homepage.jpg"
                             alt="Hình ảnh chính"
                             height={500}
                             width={5000}
-                            className="w-full h-auto block"
-                            style={{ display: 'block' }}
+                            className="w-full h-auto col-start-1 row-start-1"
                         />
-                        <div className="absolute left-0 right-0 bottom-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white rounded-b-lg">
-                            <span className="text-red-500 font-bold text-sm">The Hit List</span>
+                        <div className="col-start-1 row-start-1 self-end p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white rounded-b-lg">
+                            <span className="text-red-500 font-bold text-sm">Danh Sách Nổi Bật</span>
                             <h2 className="text-2xl md:text-3xl font-bold mt-1 mb-2">
-                                Everywhere You&apos;ll Want to Eat in Hong Kong: Ronin, The Chairman, Lau Haa, and More
+                                Khám Phá Những Nhà Hàng Đáng Thử Nhất Tại Hà Nội: Phở Thìn, Bún Chả Hương Liên, và Nhiều Hơn Nữa
                             </h2>
                             <p className="text-sm md:text-base opacity-90">
-                                Hong Kong has long relished its reputation as a city for gourmands and, after a tumultuous period of social unrest...
+                                Hà Nội từ lâu đã nổi tiếng là thiên đường ẩm thực với hàng nghìn món ăn đặc sắc...
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <div className="newsfeed-page w-[25%] pl-8">
-                    <h3 className="font-semibold mb-2 text-4xl">Discover restaurants to love in Hong Kong.</h3>
+                    <h3 className="font-semibold mb-2 text-4xl">Khám phá những nhà hàng tuyệt vời tại Hà Nội.</h3>
                     <p className="text-xl mb-4">
-                        Be the first to know with Resy’s insider guides, deep dives on old standbys, and vital intel on all the latest and greatest new openings.
+                        Trở thành người đầu tiên cập nhật với các bài viết chuyên sâu, khám phá các địa điểm lâu đời và thông tin quan trọng về những nhà hàng mới nhất. Bạn đang cần tổ chức một bữa tiệc, một ngày sinh nhật hay một buổi hẹn hò lãng mạng thì đặt ngay nào!
                     </p>
 
                     <ul className="space-y-2 text-sm">
-                        <li><a href="#" className="hover:underline">The Hit List</a></li>
-                        <li><a href="#" className="hover:underline">Events & Experiences</a></li>
-                        <li><a href="#" className="hover:underline">Resy Tips</a></li>
-                        <li><a href="#" className="hover:underline">Global Dining Access</a></li>
-                        <li><a href="#" className="hover:underline">U.S. Card Offers from Amex</a></li>
-                        <li><a href="#" className="hover:underline">Read more</a></li>
+                        <li><a href="#" className="hover:underline">Danh Sách Nổi Bật</a></li>
+                        <li><a href="#" className="hover:underline">Sự Kiện & Trải Nghiệm</a></li>
+                        <li><a href="#" className="hover:underline">Mẹo Đặt Bàn</a></li>
+                        <li><a href="#" className="hover:underline">Ẩm Thực Toàn Cầu</a></li>
+                        <li><a href="#" className="hover:underline">Ưu Đãi Thẻ Ngân Hàng</a></li>
+                        <li><a href="#" className="hover:underline">Xem thêm</a></li>
                     </ul>
 
                     <div className="mt-8 pt-4 border-t border-gray-200">
-                        <h4 className="text-sm font-medium mb-3">About Resy</h4>
+                        <h4 className="text-sm font-medium mb-3">Về Chúng Tôi</h4>
                         <div className="flex space-x-4 text-gray-500">
                             <a href="#" aria-label="Instagram">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
@@ -74,7 +73,7 @@ export default function HomePage() {
             </div>
 
             <div className="booking-list w-full px-60 my-15">
-                <h3 className="font-semibold my-2 text-4xl pb-4">Booking now</h3>
+                <h3 className="font-semibold my-2 text-4xl pb-4">Đặt bàn ngay</h3>
                 <Carousel
                     opts={{
                         align: "start",
@@ -89,28 +88,28 @@ export default function HomePage() {
                                         <div className="relative h-48 overflow-hidden rounded-t-lg">
                                             <Image
                                                 src="/image/homepage/restaurant.png"
-                                                alt="Lippo Chiuchow Restaurant"
+                                                alt="Nhà Hàng Lippo Chiuchow"
                                                 fill
                                                 className="object-cover"
                                             />
                                         </div>
                                         <CardContent className="p-4 flex-grow flex flex-col justify-between">
                                             <div>
-                                                <h4 className="font-bold text-lg mb-1">Lippo Chiuchow Restaurant</h4>
+                                                <h4 className="font-bold text-lg mb-1">Nhà Hàng Lippo Chiuchow</h4>
                                                 <div className="flex items-center gap-1 mb-2">
                                                     <span className="text-yellow-500">★</span>
                                                     <span className="font-medium">5.0</span>
-                                                    <span className="text-gray-500">· Chinese · $$</span>
+                                                    <span className="text-gray-500">· Món Hoa · $$</span>
                                                 </div>
                                                 <div className="flex items-center gap-1 text-sm text-gray-500">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
                                                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                                                     </svg>
-                                                    <span>Hong Kong</span>
+                                                    <span>Hà Nội</span>
                                                 </div>
                                             </div>
                                             <button className="mt-4 px-4 py-2 border border-blue-500 text-blue-500 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors">
-                                                Notify
+                                                Thông báo
                                             </button>
                                         </CardContent>
                                     </Card>
@@ -127,14 +126,14 @@ export default function HomePage() {
                 <div className="w-[60vw] flex items-center gap-8 h-full">
                     <div className="text-content text-white flex-1 pr-6">
                         <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                            Hẹn trước bàn ở cơ sở bạn yêu thích chỉ vài phút.
+                            Đặt bàn tại nhà hàng yêu thích chỉ trong vài phút.
                         </h2>
                     </div>
 
                     <div className="phone-images flex-1 relative h-full flex items-end justify-start">
                         <Image
                             src="/image/homepage/mobi-app.png"
-                            alt="Mobi-app"
+                            alt="Ứng dụng di động"
                             width={600}
                             height={800}
                             className="h-[90%] max-h-[100%] w-auto object-contain"
