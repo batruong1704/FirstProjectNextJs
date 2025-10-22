@@ -1,12 +1,10 @@
-import { z } from "zod"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
+import {z} from "zod"
+import RegisterForm from "@/app/(auth)/register/register-form";
+import Image from "next/image";
+
 const formSchema = z.object({
     username: z.string().min(2).max(50),
 })
-
-import RegisterForm from "@/app/(auth)/register/register-form";
-import Image from "next/image";
 
 export default function RegisterPage() {
     return (
@@ -17,11 +15,12 @@ export default function RegisterPage() {
                         <h2 className='text-3xl font-bold mb-2'>Tạo tài khoản</h2>
                         <p className="text-muted-foreground">Đăng ký để bắt đầu đặt bàn</p>
                     </div>
-                    <RegisterForm />
+                    <RegisterForm/>
                 </div>
             </div>
 
-            <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-orange-50 to-amber-100 dark:from-orange-950 dark:to-amber-900 items-center justify-center p-12">
+            <div
+                className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-orange-50 to-amber-100 dark:from-orange-950 dark:to-amber-900 items-center justify-center p-12">
                 <Image
                     src="/image/banner-register.png"
                     alt="register"

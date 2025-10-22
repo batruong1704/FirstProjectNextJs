@@ -134,7 +134,7 @@ export default function HeaderRight() {
             </Popover>
 
             <DropdownMenu>
-                <DropdownMenuTrigger>
+                <DropdownMenuTrigger asChild>
                     <Button className="flex items-center rounded-full transition-all hover:border-2 hover:border-orange-400 px-4 py-2" variant={"ghost"}>{getTimeLabel()}</Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="max-h-50">

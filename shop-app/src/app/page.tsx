@@ -1,14 +1,15 @@
-"use client"
-import Image from "next/image";
-import * as React from "react"
-import { Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
-
-import {ToggleTheme} from "@/components/toggle-theme";
+import AboutSectionPage from "@/components/AboutSection/page";
+import FooterForm from "@/components/footer/page";
+import BookingList from "@/components/Booking/page";
+import MainContentPage from "@/components/Content/page";
 
 export default function Home() {
-  return (
-      <div>
-      </div>
-  );
+    return (
+        <div className="h-full w-full">
+            <MainContentPage/>
+            <BookingList/>
+            <AboutSectionPage/>
+            <FooterForm/>
+        </div>
+    );
 }

@@ -1,17 +1,16 @@
-import { z } from "zod"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
+import {z} from "zod"
+import Image from "next/image";
+import LoginForm from "./login-form";
+
 const formSchema = z.object({
     username: z.string().min(2).max(50),
 })
 
-import Image from "next/image";
-import LoginForm from "./login-form";
-
 export default function LoginPage() {
     return (
         <div className="min-h-screen flex">
-            <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-900 items-center justify-center p-12">
+            <div
+                className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-900 items-center justify-center p-12">
                 <Image
                     src="/image/banner-register.png"
                     alt="register"
@@ -27,7 +26,7 @@ export default function LoginPage() {
                         <h2 className='text-3xl font-bold mb-2'>Đăng nhập</h2>
                         <p className="text-muted-foreground">Chào mừng bạn đã đến với Booking Table</p>
                     </div>
-                    <LoginForm />
+                    <LoginForm/>
                 </div>
             </div>
         </div>

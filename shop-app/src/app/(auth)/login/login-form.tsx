@@ -1,22 +1,15 @@
 "use client";
 
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import {z} from "zod";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {useForm} from "react-hook-form";
 
-import { Button } from "@/components/ui/button";
-import {
-    Form,
-    FormControl,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { LoginBody, LoginBodyType } from "@/schemaValidations/auth.schema";
+import {Button} from "@/components/ui/button";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage,} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {LoginBody, LoginBodyType} from "@/schemaValidations/auth.schema";
 import Link from "next/link";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
 
 const formSchema = z.object({
     username: z.string().min(2).max(50),
@@ -42,7 +35,7 @@ export default function LoginForm() {
                     <FormField
                         control={form.control}
                         name="emailOrPhoneNumber"
-                        render={({ field }) => (
+                        render={({field}) => (
                             <FormItem>
                                 <FormLabel>Email hoặc số điện thoại</FormLabel>
                                 <FormControl>
@@ -53,7 +46,7 @@ export default function LoginForm() {
                                         {...field}
                                     />
                                 </FormControl>
-                                <FormMessage />
+                                <FormMessage/>
                             </FormItem>
                         )}
                     />
@@ -61,7 +54,7 @@ export default function LoginForm() {
                     <FormField
                         control={form.control}
                         name="password"
-                        render={({ field }) => (
+                        render={({field}) => (
                             <FormItem>
                                 <FormLabel>Mật khẩu</FormLabel>
                                 <Tooltip>
@@ -83,18 +76,16 @@ export default function LoginForm() {
                                     </TooltipContent>
                                 </Tooltip>
 
-                                <FormMessage />
+                                <FormMessage/>
                             </FormItem>
                         )}
                     />
 
-                    <Button
-                        type="submit"
-                        className="w-full h-11 mt-6 font-semibold text-white
-             bg-gradient-to-br from-amber-400 to-orange-500 
-             rounded-lg shadow-md transition-all duration-300 
-             hover:scale-101 hover:shadow-lg hover:from-amber-500 hover:to-orange-600"
-                    >
+                    <Button type="submit"
+                            className="w-full h-11 mt-6 font-semibold text-white
+                             bg-gradient-to-br from-amber-400 to-orange-500
+                             rounded-lg shadow-md transition-all duration-300
+                             hover:scale-101 hover:shadow-lg hover:from-amber-500 hover:to-orange-600">
                         Đăng nhập
                     </Button>
                 </form>
