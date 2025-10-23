@@ -37,7 +37,7 @@ export default function HeaderLeft() {
     return (
         <div className="flex items-center gap-3 group">
             <Link
-                href="/homepage"
+                href="/"
                 className="rounded-full bg-gradient-to-br from-[var(--co-orage-button-start)] to-[var(--co-orage-button-end)] p-2 transition-transform group-hover:scale-110"
             >
                 <Croissant className="h-6 w-6 text-white" />

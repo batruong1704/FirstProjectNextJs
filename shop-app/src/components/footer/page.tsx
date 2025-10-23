@@ -1,6 +1,6 @@
 export default function FooterForm() {
     return (
-        <div className="app-promo-section w-full bg-[#fffff5] h-[auto] relative border-t">
+        <div className="app-promo-section w-full bg-[#fffff5] relative border-t">
             <div className="footer-title flex w-full my-10 container mx-auto border-b">
                 <div className="w-[30%] text-orange-500 text-4xl font-bold">Booking now</div>
                 <div className="w-[70%] flex justify-around text-lg space-y-4">

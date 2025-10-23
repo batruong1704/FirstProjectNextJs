@@ -8,7 +8,7 @@ const formSchema = z.object({
 
 export default function RegisterPage() {
     return (
-        <div className="min-h-screen flex">
+        <div className="h-[calc(100vh-4rem)] flex">
             <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
                 <div className="w-full max-w-md">
                     <div className="mb-8">

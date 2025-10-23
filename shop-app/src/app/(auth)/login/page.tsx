@@ -8,7 +8,7 @@ const formSchema = z.object({
 
 export default function LoginPage() {
     return (
-        <div className="min-h-screen flex">
+        <div className="h-[calc(100vh-4rem)] flex">
             <div
                 className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-900 items-center justify-center p-12">
                 <Image

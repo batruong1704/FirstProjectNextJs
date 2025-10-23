@@ -143,8 +143,8 @@ export default function RegisterForm() {
                     <Button
                         type="submit"
                         className="w-full h-11 mt-6 font-semibold text-white bg-gradient-to-br
-            from-amber-400 to-orange-500 rounded-lg shadow-md transition-all
-            duration-300 hover:scale-101 hover:shadow-lg hover:from-amber-500 hover:to-orange-600">
+                            from-amber-400 to-orange-500 rounded-lg shadow-md transition-all
+                            duration-300 hover:scale-101 hover:shadow-lg hover:from-amber-500 hover:to-orange-600">
                         Đăng ký
                     </Button>
                 </form>

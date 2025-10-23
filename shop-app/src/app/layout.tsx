@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type {Metadata} from "next";
+import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import {ThemeProvider} from "next-themes";
 import Header from "@/components/header/header";
+import FooterForm from "@/components/footer/page";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -27,16 +28,19 @@ export default function RootLayout({
     return (
         <>
             <html lang="en" suppressHydrationWarning>
-            <head />
-            <body>
+            <head/>
+            <body className="flex flex-col">
             <ThemeProvider
                 attribute="class"
                 defaultTheme="system"
                 enableSystem
                 disableTransitionOnChange
             >
-                <Header />
-                {children}
+                <Header/>
+                <main className="flex-1" >
+                    {children}
+                </main>
+                <FooterForm/>
             </ThemeProvider>
             </body>
             </html>

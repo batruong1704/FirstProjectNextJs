@@ -1,7 +1,7 @@
-import AboutSectionPage from "@/components/AboutSection/page";
+import AboutSectionPage from "@/components/aboutSection/page";
 import FooterForm from "@/components/footer/page";
-import BookingList from "@/components/Booking/page";
-import MainContentPage from "@/components/Content/page";
+import BookingList from "@/components/bookingList/page";
+import MainContentPage from "@/components/content/page";
 
 export default function Home() {
     return (
@@ -9,7 +9,6 @@ export default function Home() {
             <MainContentPage/>
             <BookingList/>
             <AboutSectionPage/>
-            <FooterForm/>
         </div>
     );
 }
